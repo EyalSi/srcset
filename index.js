@@ -10,7 +10,8 @@ function deepUnique(array) {
 
 exports.parse = string => {
 	return deepUnique(
-		string.split(/,\s+/).map(part => {
+		// support links in skincity
+		string.split(/,\s*/).map(part => {
 			const result = {};
 
 			part
